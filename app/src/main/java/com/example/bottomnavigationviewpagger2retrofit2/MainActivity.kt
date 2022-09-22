@@ -21,10 +21,19 @@ import com.example.bottomnavigationviewpagger2retrofit2.sun.model.SunData
 import com.example.bottomnavigationviewpagger2retrofit2.sun.model.SunViewModel
 import com.example.bottomnavigationviewpagger2retrofit2.sun.view.ViewPagerSunFragmentAdapter
 import com.example.bottomnavigationviewpagger2retrofit2.util.DepthPageTransformer
+import ru.geekbrains.nasapictureoftheday.settings.SettingsFragment
 import java.text.SimpleDateFormat
 import java.util.*
 
+const val ThemeDefault = "DEFAULT"
+const val ThemeSpace = "SPACE"
+const val ThemeMoon = "MOON"
+const val ThemeMars = "MARS"
+
 class MainActivity : AppCompatActivity() {
+
+    private val KEY_SP = "sp"
+    private val KEY_CURRNT_THEME = "current_theme"
 
     private lateinit var binding: ActivityMainBinding
 
@@ -57,6 +66,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(getStyle(getCurrentTheme()))
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -172,6 +182,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.menu.menu_settings -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, SettingsFragment.newInstance(), "settings").addToBackStack("").commit()
                 true
             }
             else -> super.onOptionsItemSelected(item)
@@ -251,6 +262,27 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "SunData.Error", Toast.LENGTH_LONG).show()
             }
             else -> {}
+        }
+    }
+
+    fun setCurrentTheme(currentTheme: String) {
+        val sharedPreferences = getSharedPreferences(KEY_SP, MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString(KEY_CURRNT_THEME, currentTheme)
+        editor.apply()
+    }
+
+    private fun getCurrentTheme(): String? {
+        val sharedPreferences = getSharedPreferences(KEY_SP, MODE_PRIVATE)
+        return sharedPreferences.getString(KEY_CURRNT_THEME, "")
+    }
+
+    private fun getStyle(currentTheme: String?): Int {
+        return when(currentTheme) {
+            ThemeSpace -> R.style.Theme_NasaPictureOfTheDayCosmic
+            ThemeMoon -> R.style.Theme_NasaPictureOfTheDayMoon
+            ThemeMars -> R.style.Theme_NasaPictureOfTheDayMars
+            else -> R.style.Theme_NasaPictureOfTheDay
         }
     }
 }

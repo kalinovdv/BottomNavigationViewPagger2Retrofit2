@@ -13,4 +13,33 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.NasaPictureOfTheDay" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Theme.NasaPictureOfTheDayCosmic" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimarySpace</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkSpace</item>
+        <item name="colorAccent">@color/colorPrimarySpace</item>
+    </style>
+
+    <style name="Theme.NasaPictureOfTheDayMoon" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimaryMoon</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkMoon</item>
+        <item name="colorAccent">@color/colorPrimaryMoon</item>
+    </style>
+
+    <style name="Theme.NasaPictureOfTheDayMars" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimaryMars</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkMars</item>
+        <item name="colorAccent">@color/colorPrimaryMars</item>
+    </style>
+
 </resources>
