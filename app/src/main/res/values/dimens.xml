@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fragment_pod_text_view_date_padding_top">10dp</dimen>
+    <dimen name="fragment_pod_padding">10dp</dimen>
+    <dimen name="fragment_pod_constraint_layout_padding">10dp</dimen>
+    <dimen name="fragment_earth_constraint_layout_padding">10dp</dimen>
+    <dimen name="fragment_mars_constraint_layout_padding">10dp</dimen>
+    <dimen name="fragment_sun_linear_layout_padding">10dp</dimen>
+    <dimen name="fragment_sun_text_view_title_layout_heigh">32dp</dimen>
+    <dimen name="fragment_sun_text_view_layout_width">0dp</dimen>
+</resources>

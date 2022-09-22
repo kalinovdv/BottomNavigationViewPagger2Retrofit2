@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_navigation_view_menu_pod"
+        android:icon="@drawable/ic_solar_system"
+        android:title="@string/bottom_navigation_view_menu_pod_title" />
+    <item
+        android:id="@+id/bottom_navigation_view_menu_earth"
+        android:icon="@drawable/ic_earth"
+        android:title="@string/bottom_navigation_view_menu_earth_title" />
+    <item
+        android:id="@+id/bottom_navigation_view_menu_mars"
+        android:icon="@drawable/ic_mars"
+        android:title="@string/bottom_navigation_view_menu_mars_title" />
+    <item
+        android:id="@+id/bottom_navigation_view_menu_sun"
+        android:icon="@drawable/ic_sun"
+        android:title="@string/bottom_navigation_view_menu_sun_title" />
+</menu>

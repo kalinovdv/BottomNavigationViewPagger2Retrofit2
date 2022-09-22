@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/fragment_pod_padding"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".pod.view.PodFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/fragment_pod_constraint_layout_padding"
+            android:paddingEnd="@dimen/fragment_pod_constraint_layout_padding">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fragment_pod_text_view_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fragment_pod_text_view_date_text"
+                android:textAlignment="center"
+                android:paddingTop="@dimen/fragment_pod_text_view_date_padding_top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.example.bottomnavigationviewpagger2retrofit2.util.CustomImageView
+                android:id="@+id/fragment_pod_image_view_pod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:scaleType="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_pod_text_view_date"
+                app:srcCompat="@drawable/ic_no_foto" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fragment_pod_text_view_explanation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/fragment_pod_text_view_explanation_text"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_pod_image_view_pod"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

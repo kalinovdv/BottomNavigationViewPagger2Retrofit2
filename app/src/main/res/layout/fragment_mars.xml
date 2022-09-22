@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/fragment_mars_constraint_layout_padding"
+    tools:context=".mars.view.MarsFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fragment_mars_text_view_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_mars_text_view_text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.bottomnavigationviewpagger2retrofit2.util.CustomImageView
+        android:id="@+id/fragment_mars_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_mars_text_view_date"
+        app:srcCompat="@drawable/ic_no_foto"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
