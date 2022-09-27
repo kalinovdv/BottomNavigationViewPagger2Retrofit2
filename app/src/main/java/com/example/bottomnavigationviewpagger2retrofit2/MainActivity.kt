@@ -21,7 +21,7 @@ import com.example.bottomnavigationviewpagger2retrofit2.sun.model.SunData
 import com.example.bottomnavigationviewpagger2retrofit2.sun.model.SunViewModel
 import com.example.bottomnavigationviewpagger2retrofit2.sun.view.ViewPagerSunFragmentAdapter
 import com.example.bottomnavigationviewpagger2retrofit2.util.DepthPageTransformer
-import ru.geekbrains.nasapictureoftheday.settings.SettingsFragment
+import com.example.bottomnavigationviewpagger2retrofit2.settings.SettingsFragment
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -180,13 +180,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.menu.menu_settings -> {
-                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, SettingsFragment.newInstance(), "settings").addToBackStack("").commit()
-                true
+        when (item.itemId) {
+            R.id.menu_settings -> {
+                this.supportFragmentManager.beginTransaction().replace(R.id.container, SettingsFragment.newInstance(), "settings").addToBackStack("").commit()
             }
             else -> super.onOptionsItemSelected(item)
         }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun renderPodData(podData: PodData?) {

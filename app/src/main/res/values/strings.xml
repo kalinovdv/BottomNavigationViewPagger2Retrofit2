@@ -17,4 +17,8 @@
     <string name="fragment_sun_text_view_end_date_text">Время окончания:</string>
     <string name="fragment_sun_text_view_class_type_text">Класс:</string>
     <string name="fragment_sun_text_view_source_location_text">Источник:</string>
+    <string name="settings_choose_theme_chip_group_default_text">Тема по-умолчанию</string>
+    <string name="settings_choose_theme_chip_group_space_text">Космическая тема</string>
+    <string name="settings_choose_theme_chip_group_moon_text">Лунная тема</string>
+    <string name="settings_choose_theme_chip_group_mars_text">Марсианская тема</string>
 </resources>

@@ -42,4 +42,32 @@
         <item name="colorAccent">@color/colorPrimaryMars</item>
     </style>
 
+    <style name="settings_choose_theme_chip_group_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="chipSpacingHorizontal">@dimen/settings_choose_theme_chip_spacing_horizontal</item>
+        <item name="chipSpacingVertical">@dimen/settings_choose_theme_chip_spacing_vertical</item>
+        <item name="singleLine">false</item>
+        <item name="singleSelection">true</item>
+    </style>
+
+    <style name="settings_choose_theme_chip_group_themes_style" parent="@style/Widget.MaterialComponents.Chip.Choice">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAppearance">@style/chip_text_style_appearance</item>
+    </style>
+
+    <style name="chip_text_style_appearance">
+        <item name="android:textSize">@dimen/main_image_selection_chips_group_text_size</item>
+        <item name="android:textColor">@color/main_image_selection_chips_group_text_color</item>
+    </style>
+
+    <style name="settings_choose_theme_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">@dimen/settings_layout_margin</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
 </resources>

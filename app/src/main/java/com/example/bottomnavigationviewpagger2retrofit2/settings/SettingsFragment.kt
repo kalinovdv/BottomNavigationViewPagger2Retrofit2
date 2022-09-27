@@ -1,4 +1,4 @@
-package ru.geekbrains.nasapictureoftheday.settings
+package com.example.bottomnavigationviewpagger2retrofit2.settings
 
 import android.content.Context
 import android.os.Bundle
