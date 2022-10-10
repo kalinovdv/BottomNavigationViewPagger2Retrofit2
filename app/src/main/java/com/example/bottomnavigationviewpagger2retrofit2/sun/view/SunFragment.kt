@@ -24,11 +24,18 @@ class SunFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         arguments?.let {
-            binding.fragmentSunTextViewStartDateVal.text = it.getString("startDate")
-            binding.fragmentSunTextViewPeakDateVal.text = it.getString("peakDate")
-            binding.fragmentSunTextViewEndDateVal.text = it.getString("endDate")
-            binding.fragmentSunTextViewClassTypeVal.text = it.getString("classType")
-            binding.fragmentSunTextViewSourceLocationVal.text = it.getString("sourceLocation")
+            when (it.getInt("type")) {
+                0 -> {
+                    binding.fragmentSunTextViewError.text = "Нет данных"
+                }
+                1 -> {
+                    binding.fragmentSunTextViewStartDateVal.text = it.getString("startDate")
+                    binding.fragmentSunTextViewPeakDateVal.text = it.getString("peakDate")
+                    binding.fragmentSunTextViewEndDateVal.text = it.getString("endDate")
+                    binding.fragmentSunTextViewClassTypeVal.text = it.getString("classType")
+                    binding.fragmentSunTextViewSourceLocationVal.text = it.getString("sourceLocation")
+                }
+            }
         }
     }
 

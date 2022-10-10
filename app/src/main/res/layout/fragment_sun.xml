@@ -123,4 +123,19 @@
             android:layout_weight="1"
             android:textAlignment="center" />
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/fragment_sun_linear_layout_padding">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fragment_sun_text_view_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/fragment_sun_text_view_error_text_size"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
 </androidx.appcompat.widget.LinearLayoutCompat>

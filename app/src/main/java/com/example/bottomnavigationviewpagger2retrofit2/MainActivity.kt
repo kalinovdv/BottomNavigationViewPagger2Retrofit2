@@ -63,6 +63,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var dateOfMarsRoverPictures: String
     private lateinit var startDateOfSunFlare: String
     private lateinit var endDateOfSunFlare: String
+    private var typeLoad: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -160,7 +161,8 @@ class MainActivity : AppCompatActivity() {
                         peakDateSunList,
                         endDateSunList,
                         classTypeSunList,
-                        sourceLocationSunList
+                        sourceLocationSunList,
+                        typeLoad
                     )
                     true
                 }
@@ -202,7 +204,7 @@ class MainActivity : AppCompatActivity() {
 
             }
             is PodData.Error -> {
-                Toast.makeText(this, "PodData.Error", Toast.LENGTH_LONG).show()
+                //Toast.makeText(this, "PodData.Error", Toast.LENGTH_LONG).show()
             }
             else -> {}
         }
@@ -254,12 +256,14 @@ class MainActivity : AppCompatActivity() {
                     element.classType.let { classTypeSunList.add(it) }
                     element.sourceLocation.let { sourceLocationSunList.add(it) }
                 }
+                typeLoad = 1
             }
             is SunData.Loading -> {
 
             }
             is SunData.Error -> {
                 Toast.makeText(this, "SunData.Error", Toast.LENGTH_LONG).show()
+                typeLoad = 0
             }
             else -> {}
         }

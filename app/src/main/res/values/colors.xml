@@ -17,5 +17,6 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorRed">#b90000</color>
     <color name="main_image_selection_chips_group_text_color">#FFFFFF</color>
 </resources>

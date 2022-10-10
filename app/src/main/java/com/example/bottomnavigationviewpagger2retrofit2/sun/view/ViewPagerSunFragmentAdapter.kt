@@ -12,6 +12,7 @@ class ViewPagerSunFragmentAdapter(
     endDateList: ArrayList<String>,
     classTypeList: ArrayList<String>,
     sourceLocationList: ArrayList<String>,
+    loadType: Int
 ) : FragmentStateAdapter(activity) {
 
     private var startList = startDateList
@@ -19,6 +20,7 @@ class ViewPagerSunFragmentAdapter(
     private var endList = endDateList
     private var classList = classTypeList
     private var sourceList = sourceLocationList
+    private var type = loadType
 
     override fun createFragment(position: Int): Fragment = SunFragment().apply {
         arguments = bundleOf(
@@ -27,6 +29,7 @@ class ViewPagerSunFragmentAdapter(
             "endDate" to endList[position],
             "classType" to classList[position],
             "sourceLocation" to sourceList[position],
+            "type" to type
         )
     }
 

@@ -32,4 +32,5 @@
     <dimen name="settings_layout_margin">20dp</dimen>
     <dimen name="settings_choose_theme_chip_spacing_horizontal">200dp</dimen>
     <dimen name="settings_choose_theme_chip_spacing_vertical">10dp</dimen>
+    <dimen name="fragment_sun_text_view_error_text_size">24sp</dimen>
 </resources>
